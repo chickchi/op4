@@ -819,7 +819,7 @@ void NvgWindow::drawRestAreaItem(QPainter &p, int yPos, capnp::Text::Reader imag
   int mx = 20;
   int my = 5;
 
-  int box_width = 580;
+  int box_width = Hardware::TICI() ? 580 : 510;
   int box_height = 200;
 
   int icon_size = 70;
@@ -830,9 +830,9 @@ void NvgWindow::drawRestAreaItem(QPainter &p, int yPos, capnp::Text::Reader imag
   p.drawRoundedRect(rc, 5, 5);
 
   if(lastItem)
-    p.setPen(QColor(255, 255, 255, 255));
+    p.setPen(QColor(255, 255, 255, 200));
   else
-    p.setPen(QColor(255, 255, 255, 160));
+    p.setPen(QColor(255, 255, 255, 150));
 
   int x = rc.left() + mx;
   int y = rc.top() + my;
