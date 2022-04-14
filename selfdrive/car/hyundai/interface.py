@@ -41,8 +41,8 @@ class CarInterface(CarInterfaceBase):
     tire_stiffness_factor = 1.
     ret.maxSteeringAngleDeg = 1000.
 
-    ret.steerFaultMaxAngle = 85
-    ret.steerFaultMaxFrames = 90
+    ret.steerFaultMaxAngle = 90
+    ret.steerFaultMaxFrames = 95
 
 
 
